@@ -37,6 +37,6 @@ if(faveNum === 13){
 
 for (i = 0; i < 5; i++){
   console.log(faveNum)
-  console.log("--------------")
+  console.log("--------------") // this is to seperate the faveNum console log so it is easier to read.
 }
 

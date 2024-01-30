@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+const gitDefinition = "git is an open source that is free to use. It handles, keeps track of, and helps in the controle of design for projects both small and large."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +17,7 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+const gitHubDefinition = "github is a website the remotly stores, (cloude based), repositories that can then be shared or updated. This helps groups,companies,or individuals manage changes to coding files and track said changes, as well as share progress with in the project."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -25,7 +25,7 @@
     It should be a string containing your best definition of what 'git init' does.
 */
 
-//CODE HERE
+const gitInitDefinition = "Git init creates a repository that files can then be added in to."
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +33,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+const gitCloneDefinition = "Git clone will copy and existing repository and allow you to save or move the copied repository a the location you desire."
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +41,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+const gitStatusDefinition = "Git status will allow you to see the state of the repository that you are working in.  It shows changes, which files are added and being tracked, modifiacations and commits"
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +52,8 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+const gitAddCode = "Git add will add the stated file to the current repository that you are in."
+const gitAddCode = "The command git add . will add all files in the dir and sub dir you are working in."
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,8 +64,8 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
-
+const gitCommitDefinition = "Git commit will take a snap shot that can name which allows you to see a specifice point in the history of the repository."
+const gitCommitCode = 'git commit -m "" will allow you to create a commit to the repository.'
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -72,4 +73,4 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+const gitPushDefinition = "Git push will upload and or update the reposity you are working in to a remotlocation such as github."

@@ -49,8 +49,12 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
-
+let totalAcres = 0
+for (i = 0; i < fujiAcres.length; i++){
+    totalAcres +=  fujiAcres[i]
+    // console.log(totalAcres) This is to check and see that it is adding the new index value to totalAcres each time
+}
+console.log(totalAcres)
 
 
 
@@ -67,10 +71,8 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
-
-
-
+let averageDailyAcres  = totalAcres / fujiAcres.length // I am assigning the varr averageDailyAcres the answer of totalAcres devided by how many indexs are in the fujiAcres array
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -105,8 +107,15 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
-
+while (acresLeft > 0){
+    days += 1                       // The += will increase the days var by 1 each time the loop is run
+    acresLeft -= averageDailyAcres // The -= will decrease the total from averageDailyAcres from acresLeft
+    // console.log(days)            These console.logs will show if the loop is correctly adding and subtracting
+    // console.log("-------")
+    // console.log(acresLeft)
+    // console.log("-------")
+}
+console.log(days)
 
 
 // PROBLEM 4
@@ -133,13 +142,32 @@ let days = 0
     values to the new arrays.
 */
 
-// CODE HERE
+const fujiAcresCopy = fujiAcres.slice()
+// console.log(fujiAcresCopy) checking to see if the slice command worked as expected.
+const galaAcresCopy = galaAcres.slice()
+const pinkAcresCopy = pinkAcres.slice()
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
+for (i = 0; i < fujiAcresCopy.length; i++){
+    fujiTons.push(fujiAcresCopy[i] * 6.5)  // By using the .push command it is adding the index value * 6.5 to the varr
+    // console.log(fujiTons)  This will console.log the results of the for loop for the fujiTons arry.
+}
 
+for (i = 0; i < galaAcresCopy.length; i++){
+    galaTons.push(galaAcresCopy[i] * 6.5)  // By using the .push command it is adding the index value * 6.5 to the varr
+    // console.log(galaTons)  This will console.log the results of the for loop for the galaTons arry
+}
+
+for (i = 0; i < pinkAcresCopy.length; i++){
+    pinkTons.push(pinkAcresCopy[i] * 6.5) // By using the .push command it is adding the index value * 6.5 to the varr
+    // console.log(pinkTons)  This will console.log the results of the for loop for the galaTons arry
+}
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
 
 
@@ -160,15 +188,28 @@ let days = 0
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
-
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
 
 
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
+for(i = 0; i < fujiTons.length; i ++){
+    fujiPounds += fujiTons[i] * 2000
+    // console.log(fujiPounds)  This checks if the for loop is multpling the tons to pounds correctly
+}
+for(i = 0; i < galaTons.length; i ++){
+    galaPounds += galaTons[i] * 2000
+    // console.log(galaPounds)  This checks if the for loop is multpling the tons to pounds correctly
+}
+for(i = 0; i < pinkTons.length; i ++){
+    pinkPounds += pinkTons[i] * 2000
+    // console.log(pinkPounds)  This checks if the for loop is mulpling the tons to pounds correctly
+}
 
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
 
 
 // PROBLEM 6
@@ -189,9 +230,19 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = 0
+let galaProfit = 0
+let pinkProfit = 0
+
+fujiProfit += fujiPounds * fujiPrice  // This will do the math of finding the total profit for Fuji apples by multiplying the pounds with the price per pound
+galaProfit += galaPounds * galaPrice  // This will do the math of finding the total profit for gala apples by multiplying the pounds with the price per pound
+pinkProfit += pinkPounds * pinkPrice  // This will do the math of finding the total profit for pink apples by multiplying the pounds with the price per pound
+
+// console.log("---------------------") This line was to seperate the previous console.log 
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
+
 
 
 
@@ -208,4 +259,10 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = 0
+
+totalProfit += fujiProfit + galaProfit + pinkProfit // This is adding all the profits from each profit var and adding it to the new totalprofit var
+
+// console.log("-----------") This line was to seperate the previous console.log
+console.log(totalProfit)
+

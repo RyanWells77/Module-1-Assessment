@@ -3,12 +3,16 @@
 
 const faveColors = ['red', 'green', 'black']
 
-//CODE HERE
+const colorCopy = faveColors.slice()
+// console.log(faveColors, " this is the faveColors arr.")  
+// console.log(colorCopy, " this is the colorCopy arr.")
+// The two console.logs are to compare the two const and verify if they are the same.
 
 //////////////////PROBLEM 2////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
-//CODE HERE
+colorCopy.push('blue')
+// console.log(colorCopy) checking to see if the push command to add blue excuted correctly
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -18,7 +22,10 @@ const faveColors = ['red', 'green', 'black']
 
 const numbers = [1, 2, 3, 4, 5]
 
-//CODE HERE
+const middleNums = numbers.slice(1, 4)
+// console.log(middleNums) this will check if the new arry "middleNums" contains the correct numbers 2, 3, 4
+// from the correct indexes in the "numbers" arry.
+
 
 
 //////////////////PROBLEM 4////////////////////
@@ -32,5 +39,16 @@ const numbers = [1, 2, 3, 4, 5]
 */
 
 const bigOrSmallArray = [1, 99, 42, 69, 102, -10, 159, 352]
+let answeres = ""
 
+for (i = 0; i < bigOrSmallArray.length; i++){
+  if (bigOrSmallArray[i] > 100){
+    console.log("big")
+    // console.log("------------") this will help see each time it "big" is console.loged
+  } else if (bigOrSmallArray[i] <= 100){
+    answeres += "small"
+    // console.log(answeres)
+    // console.log("------------") this will show if small was pushed to the arry "answers"
+  }
+}
 // CODE HERE
